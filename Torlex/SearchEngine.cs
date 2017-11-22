@@ -26,7 +26,7 @@ namespace Torlex
 
         public static string ParseTorrentPage(string name)
         {
-            return "http://www.mejortorrent.com/secciones.php?sec=buscador&valor=" + name.Replace("+", "%2B").Replace(" ", " +");
+            return "http://www.mejortorrent.com/secciones.php?sec=buscador&valor=" + name;
         }
 
         public async Task<HtmlDocument> LoadAsync(string url)
@@ -79,8 +79,8 @@ namespace Torlex
             }
             catch (Exception)
             {
-                Form1.form.TitleState = "Error...";
-                System.Windows.Forms.MessageBox.Show("Not found exception","Error",System.Windows.Forms.MessageBoxButtons.OK,System.Windows.Forms.MessageBoxIcon.Warning);
+                Form1.form.TitleState = "Error";
+                System.Windows.Forms.MessageBox.Show("We couldn't find your film", "Not found exception", System.Windows.Forms.MessageBoxButtons.OK,System.Windows.Forms.MessageBoxIcon.Warning);
             }
         }
 

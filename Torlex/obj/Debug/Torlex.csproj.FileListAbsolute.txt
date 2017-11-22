@@ -1,0 +1,16 @@
+D:\Proyectos\VisualStudio\Torlex\Torlex\bin\Debug\Torlex.exe.config
+D:\Proyectos\VisualStudio\Torlex\Torlex\bin\Debug\Torlex.exe
+D:\Proyectos\VisualStudio\Torlex\Torlex\bin\Debug\Torlex.pdb
+D:\Proyectos\VisualStudio\Torlex\Torlex\obj\Debug\Torlex.csprojResolveAssemblyReference.cache
+D:\Proyectos\VisualStudio\Torlex\Torlex\obj\Debug\Torlex.Form1.resources
+D:\Proyectos\VisualStudio\Torlex\Torlex\obj\Debug\Torlex.Properties.Resources.resources
+D:\Proyectos\VisualStudio\Torlex\Torlex\obj\Debug\Torlex.csproj.GenerateResource.Cache
+D:\Proyectos\VisualStudio\Torlex\Torlex\obj\Debug\Torlex.exe
+D:\Proyectos\VisualStudio\Torlex\Torlex\obj\Debug\Torlex.pdb
+D:\Proyectos\VisualStudio\Torlex\Torlex\bin\Debug\HtmlAgilityPack.dll
+D:\Proyectos\VisualStudio\Torlex\Torlex\bin\Debug\HtmlAgilityPack.pdb
+D:\Proyectos\VisualStudio\Torlex\Torlex\bin\Debug\HtmlAgilityPack.xml
+D:\Proyectos\VisualStudio\Torlex\Torlex\bin\Debug\Torlex.exe.manifest
+D:\Proyectos\VisualStudio\Torlex\Torlex\bin\Debug\Torlex.application
+D:\Proyectos\VisualStudio\Torlex\Torlex\obj\Debug\Torlex.exe.manifest
+D:\Proyectos\VisualStudio\Torlex\Torlex\obj\Debug\Torlex.application

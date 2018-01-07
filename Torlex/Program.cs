@@ -12,11 +12,14 @@ namespace Torlex
         /// Punto de entrada principal para la aplicación.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            if (args.Length > 0)
+                Application.Run(new Form1(args));
+            else
+                Application.Run(new Form1());
         }
     }
 }

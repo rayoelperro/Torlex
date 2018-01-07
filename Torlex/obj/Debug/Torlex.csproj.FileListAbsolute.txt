@@ -14,3 +14,4 @@ D:\Proyectos\VisualStudio\Torlex\Torlex\bin\Debug\Torlex.exe.manifest
 D:\Proyectos\VisualStudio\Torlex\Torlex\bin\Debug\Torlex.application
 D:\Proyectos\VisualStudio\Torlex\Torlex\obj\Debug\Torlex.exe.manifest
 D:\Proyectos\VisualStudio\Torlex\Torlex\obj\Debug\Torlex.application
+D:\Proyectos\VisualStudio\Torlex\Torlex\obj\Debug\Torlex.log.resources

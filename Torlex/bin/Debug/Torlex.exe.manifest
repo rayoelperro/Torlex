@@ -62,10 +62,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Mn9o1tFqNa7SWVxCubwmoobg8iuCXHxq/d6fdrl7zWk=</dsig:DigestValue>
+        <dsig:DigestValue>TcSQI3CgIjvnKLPy9Q5QBm1pUjSLumv8pDNK5WVWukU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="Resources\Instrucciones.txt" size="323">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>XzSdolfoqSqzF+lEQ66toJ/AuYt0XeRaeW1r3RCfpA8=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Torlex.exe.config" size="189">
     <hash>
       <dsig:Transforms>

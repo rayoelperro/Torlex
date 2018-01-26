@@ -7,14 +7,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Torlex.exe.manifest" size="4640">
+    <dependentAssembly dependencyType="install" codebase="Torlex.exe.manifest" size="5044">
       <assemblyIdentity name="Torlex.exe" version="2.0.1.9" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3FwOcT/rH6Ft72Yf07eXCNX16hgIuTPLyFufrtgNU9A=</dsig:DigestValue>
+        <dsig:DigestValue>/86YYBGpSAFX/je+nf2c9Ap6VoanOLQQu5BY1YKlJsU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

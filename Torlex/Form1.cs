@@ -32,7 +32,8 @@ namespace Torlex
             {
                 if (args.Length > 1)
                     se.savepath = args[1];
-                string path = se.DownloadFile(args[0]);
+                bool v = false;
+                string path = se.DownloadFile(args[0], ref v);
                 if (path != null)
                 {
                     Process.Start(path);
@@ -56,9 +57,12 @@ namespace Torlex
                 string[] urls = (string[])se.urls[indx];
                 if (urls != null)
                 {
+                    bool stop = false;
                     foreach (string url in urls)
                     {
-                        string path = se.DownloadFile(url);
+                        if (stop)
+                            break;
+                        string path = se.DownloadFile(url, ref stop);
                         if (path != null)
                             Process.Start(path);
                         else
@@ -70,7 +74,8 @@ namespace Torlex
             }
             else
             {
-                string path = se.DownloadFile((string)se.urls[indx]);
+                bool v = false;
+                string path = se.DownloadFile((string)se.urls[indx], ref v);
                 if (path != null)
                     Process.Start(path);
                 else

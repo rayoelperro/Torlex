@@ -125,7 +125,7 @@ namespace Torlex
             foreach (HtmlNode p in getDownPage.DocumentNode.SelectNodes("//a"))
             {
                 if (p.InnerHtml == "<b>aqu�</b>")
-                    return "http://www.mejortorrent.com" + p.GetAttributeValue("href", "error");
+                    return p.GetAttributeValue("href", "error");
             }
             return null;
         }
@@ -167,12 +167,14 @@ namespace Torlex
             }
         }
 
-        public string DownloadFile(string url)
+        public string DownloadFile(string url, ref bool stop)
         {
             WebClient wc = new WebClient();
             byte[] bytes = wc.DownloadData(url);
             MemoryStream ms = new MemoryStream(bytes);
             string n = GetName(url);
+            if (System.Windows.Forms.MessageBox.Show("¿Quieres realmente descargar el torrent?", "Descargar Torrent", System.Windows.Forms.MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No)
+                return null;
             if (savepath == "")
             {
                 System.Windows.Forms.FolderBrowserDialog fb = new System.Windows.Forms.FolderBrowserDialog();
@@ -183,6 +185,7 @@ namespace Torlex
                     savepath = fb.SelectedPath;
                     return path;
                 }
+                stop = true;
                 return null;
             }
             else

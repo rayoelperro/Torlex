@@ -4,7 +4,7 @@
   <description asmv2:iconFile="Torlex.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Torlex" version="2.0.1.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Torlex" version="2.6.3.4" language="neutral" processorArchitecture="msil" />
     <commandLine file="Torlex.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -56,13 +56,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Torlex.exe" size="817688">
-      <assemblyIdentity name="Torlex" version="2.0.1.0" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="Torlex" version="2.6.3.4" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OJb1rmWvizX3xw6VvDda1tE7vwH0Wo0rK2mM9XSn4mE=</dsig:DigestValue>
+        <dsig:DigestValue>lQJHCRaEj4DRiPYQagtxNe9A4WxYlcjJWba7ftxYSxo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

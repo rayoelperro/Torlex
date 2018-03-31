@@ -124,8 +124,12 @@ namespace Torlex
             HtmlDocument getDownPage = await LoadAsync("http://www.mejortorrent.com/secciones.php?sec=descargas&ap=contar&tabla=peliculas&id=" + downloadnum + "&link_bajar=1");
             foreach (HtmlNode p in getDownPage.DocumentNode.SelectNodes("//a"))
             {
+                string preurl = "";
                 if (p.InnerHtml == "<b>aqu�</b>")
-                    return p.GetAttributeValue("href", "error");
+                    if((preurl = p.GetAttributeValue("href", "error")).StartsWith("http://www.mejortorrent.com"))
+                        return p.GetAttributeValue("href", "error");
+                    else
+                        return "http://www.mejortorrent.com"+preurl;
             }
             return null;
         }

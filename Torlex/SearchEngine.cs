@@ -18,7 +18,8 @@ namespace Torlex
         public ArrayList multi;
         public string savepath = "";
         public int Key = 0;
-        private string[] CanEnter = { "Pel�cula", "Serie" };
+        private string[] can_enter = { "Pel�cula", "Serie" };
+        public const string MainURL = "http://www.mejortorrent.org";
 
         public SearchEngine(System.Windows.Forms.ListView lv)
         {
@@ -29,7 +30,7 @@ namespace Torlex
 
         public static string ParseTorrentPage(string name)
         {
-            return "http://www.mejortorrent.com/secciones.php?sec=buscador&valor=" + name;
+            return MainURL + "/secciones.php?sec=buscador&valor=" + name;
         }
 
         public async Task<HtmlDocument> LoadMainAsync(string url)
@@ -66,10 +67,10 @@ namespace Torlex
                     foreach (HtmlNode ins in nd.SelectNodes("./td"))
                     {
                         string type = ins.InnerHtml;
-                        if (Key == asg && Array.IndexOf(CanEnter, type) >= 0)
+                        if (Key == asg && Array.IndexOf(can_enter, type) >= 0)
                         {
                             string prepath = nd.SelectSingleNode("./td").SelectSingleNode("./a").GetAttributeValue("href", "Error");
-                            string path = "http://www.mejortorrent.com" + prepath;
+                            string path = MainURL + prepath;
                             HtmlDocument inside = await LoadAsync(path);
                             string Img = "";
                             string title = "";
@@ -90,7 +91,7 @@ namespace Torlex
                                 Img = inside.DocumentNode.SelectSingleNode("//img[@style='border-right:1px solid black; border-bottom:1px solid black;']").GetAttributeValue("src", "Error");
                                 string temp = inside.DocumentNode.SelectSingleNode("//span[@style='font-size:16px;']").SelectSingleNode("./b").InnerText;
                                 title = inside.DocumentNode.SelectSingleNode("//span[@style='font-size:18px; color:#0A3A86;']").SelectSingleNode("./b").InnerText + nd.SelectSingleNode("./td").SelectSingleNode("./span").InnerText + temp;
-                                BrowserHandler b = new BrowserHandler(this, l, Img, title, path);
+                                BrowserHandler b = new BrowserHandler(this, l, Img, title, path, MainURL);
                             }
                         }
                     }
@@ -121,15 +122,15 @@ namespace Torlex
 
         public async Task<string> DownloadURL(string downloadnum)
         {
-            HtmlDocument getDownPage = await LoadAsync("http://www.mejortorrent.com/secciones.php?sec=descargas&ap=contar&tabla=peliculas&id=" + downloadnum + "&link_bajar=1");
+            HtmlDocument getDownPage = await LoadAsync(MainURL + "/secciones.php?sec=descargas&ap=contar&tabla=peliculas&id=" + downloadnum + "&link_bajar=1");
             foreach (HtmlNode p in getDownPage.DocumentNode.SelectNodes("//a"))
             {
                 string preurl = "";
                 if (p.InnerHtml == "<b>aqu�</b>")
-                    if((preurl = p.GetAttributeValue("href", "error")).StartsWith("http://www.mejortorrent.com"))
+                    if((preurl = p.GetAttributeValue("href", "error")).StartsWith(MainURL))
                         return p.GetAttributeValue("href", "error");
                     else
-                        return "http://www.mejortorrent.com"+preurl;
+                        return MainURL + preurl;
             }
             return null;
         }

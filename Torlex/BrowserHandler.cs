@@ -18,15 +18,17 @@ namespace Torlex
         string path;
         WebBrowser v;
         bool apply = false;
-        const string DOWNURL = "http://www.mejortorrent.com/secciones.php?sec=descargas&ap=contar_varios";
+        private string url_core;
+        string DOWNURL { get => url_core + "/secciones.php?sec=descargas&ap=contar_varios"; }
 
-        public BrowserHandler(SearchEngine se, ImageList l, string img, string title, string path)
+        public BrowserHandler(SearchEngine se, ImageList l, string img, string title, string path, string url_core)
         {
             this.se = se;
             this.l = l;
             this.img = img;
             this.title = title;
             this.path = path;
+            this.url_core = url_core;
             v = CreateWB(path);
             v.DocumentCompleted += Handle;
         }
